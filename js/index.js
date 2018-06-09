@@ -36,14 +36,14 @@ $(document).ready(function() {
 
     // Carousel initialization
     owl.owlCarousel({
-        loop: false,
+        loop: true,
         margin: 0,
+        autoplay: true,
         center: true,
         navSpeed: 500,
-        nav: true,
+        nav: false,
         touchDrag: false,
         mouseDrag: false,
-        rewind: true,
         items: 1
     });
 
@@ -118,10 +118,14 @@ icon.click(function() {
 
 function getSlide() {
     var wW = $(window).width();
-    if (wW < 601) {
-        return 1;
+    if (wW < 601 && wW > 500) {
+        return 2;
+    } else if (wW < 500) {
+
+    } else {
+        return 3;
     }
-    return 3;
+
 }
 var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
