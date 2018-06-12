@@ -172,7 +172,7 @@ $(document).ready(function() {
                 scale: 1.1
             })
         } else {
-            alert("2") // Safari
+
         }
 
     }
