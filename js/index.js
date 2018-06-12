@@ -156,16 +156,27 @@ var swiper = new Swiper('.swiper-container', {
 
 
 /*=========================================================================
-   Slider custom
+   JS TILT
 =========================================================================*/
 
 
 
-function id() {
-    var i = $('.card').length;
-    console.log(i)
-}
+$(document).ready(function() {
+    var ua = navigator.userAgent.toLowerCase()
+    var es_s = navigator.userAgent.toLowerCase().indexOf('safari') > -1;
+    if (ua.indexOf('safari') != -1) {
+        if (ua.indexOf('chrome') > -1) {
+            $('.js-tilt').tilt({
+                glare: true,
+                maxGlare: .5,
+                scale: 1.1
+            })
+        } else {
+            alert("2") // Safari
+        }
+
+    }
 
 
 
-id();
+})
