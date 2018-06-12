@@ -172,9 +172,15 @@ $(document).ready(function() {
                 scale: 1.1
             })
         } else {
-
+            alert("2") // Safari
         }
 
+    } else {
+        $('.js-tilt').tilt({
+            glare: true,
+            maxGlare: .5,
+            scale: 1.1
+        })
     }
 
 
